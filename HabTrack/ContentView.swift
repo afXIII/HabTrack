@@ -9,8 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    let addBtnFont = Font.system(size: 50).bold()
+    @State private var showAddSheet = false
+    @State private var showSettingsSheet = false
     var body: some View {
-        Text("Hello, World!")
+        GeometryReader { geometry in
+            NavigationView{
+                VStack{
+                    List{
+                        ForEach(0..<4){ _ in
+                            Text("Task")
+                        }
+                    }
+                    .frame(height: geometry.size.height - 200)
+                    
+                    Button(action: {
+                        self.showAddSheet = true
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .font(self.addBtnFont)
+                            .foregroundColor(.green)
+                    }
+                }
+            .navigationBarTitle("HabTrack")
+            .navigationBarItems(trailing:
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Image(systemName: "gear")
+                        .foregroundColor(.black)
+                }
+                )
+            }
+        }
     }
 }
 
