@@ -9,42 +9,73 @@
 import SwiftUI
 
 struct ContentView: View {
-    let addBtnFont = Font.system(size: 50).bold()
-    @State private var showAddSheet = false
-    @State private var showSettingsSheet = false
+    let addBtnFont = Font.system(size: 30).bold()
+    var tasks = [String]()
+    @State private var showSheet = false
+    @State private var sheetView = ""
     var body: some View {
-        GeometryReader { geometry in
-            NavigationView{
-                VStack{
-                    List{
-                        ForEach(0..<4){ _ in
-                            Text("Task")
+        NavigationView{
+            VStack{
+                List{
+                    ForEach(0..<14){ _ in
+                        HabRow()
+                    }
+                }
+                ZStack {
+                    VStack(spacing: 0) {
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(height:50)
+                        Rectangle()
+                            .fill(Color.gray)
+                            .frame(height:50)
+                            .overlay(Rectangle().stroke(Color.black, lineWidth: 3))
+                            .shadow(radius: 10)
+                    }
+                    Button(action: {
+                        self.sheetView = "addHab"
+                        self.showSheet = true
+                    }) {
+                        ZStack {
+                            Circle()
+                                .fill(Color.green)
+                                .frame(width:60, height: 100)
+                                .shadow(radius: 10)
+                            Image(systemName: "plus")
+                                .foregroundColor(.white)
+                                .font(addBtnFont)
                         }
                     }
-                    .frame(height: geometry.size.height - 200)
-                    
-                    Button(action: {
-                        self.showAddSheet = true
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                            .font(self.addBtnFont)
-                            .foregroundColor(.green)
-                    }
                 }
+            }
             .navigationBarTitle("HabTrack")
             .navigationBarItems(trailing:
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    self.sheetView = "settings"
+                    self.showSheet = true
+                }) {
                     Image(systemName: "gear")
                         .foregroundColor(.black)
+            })
+            .sheet(isPresented: self.$showSheet){
+                if self.sheetView == "addHab"{
+                    AddHab()
+                } else {
+                    Settings()
                 }
-                )
             }
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ForEach(["iPhone SE", "iPhone 11 Pro"], id: \.self){deviceName in
+            ContentView()
+            .previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
+        
     }
 }

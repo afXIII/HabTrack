@@ -13,6 +13,9 @@
 		15175E15249203BE005D2424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15175E14249203BE005D2424 /* Assets.xcassets */; };
 		15175E18249203BE005D2424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15175E17249203BE005D2424 /* Preview Assets.xcassets */; };
 		15175E1B249203BE005D2424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15175E19249203BE005D2424 /* LaunchScreen.storyboard */; };
+		15380AAE2494014B007870FD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AAD2494014B007870FD /* Settings.swift */; };
+		15380AB0249401CE007870FD /* AddHab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AAF249401CE007870FD /* AddHab.swift */; };
+		15380AB22494260E007870FD /* HabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AB12494260E007870FD /* HabRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		15175E17249203BE005D2424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15175E1A249203BE005D2424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15175E1C249203BE005D2424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15380AAD2494014B007870FD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		15380AAF249401CE007870FD /* AddHab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHab.swift; sourceTree = "<group>"; };
+		15380AB12494260E007870FD /* HabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				15175E0E249203BB005D2424 /* AppDelegate.swift */,
 				15175E10249203BB005D2424 /* SceneDelegate.swift */,
 				15175E12249203BB005D2424 /* ContentView.swift */,
+				15380AB12494260E007870FD /* HabRow.swift */,
+				15380AAF249401CE007870FD /* AddHab.swift */,
+				15380AAD2494014B007870FD /* Settings.swift */,
 				15175E14249203BE005D2424 /* Assets.xcassets */,
 				15175E19249203BE005D2424 /* LaunchScreen.storyboard */,
 				15175E1C249203BE005D2424 /* Info.plist */,
@@ -148,6 +157,9 @@
 			files = (
 				15175E0F249203BB005D2424 /* AppDelegate.swift in Sources */,
 				15175E11249203BB005D2424 /* SceneDelegate.swift in Sources */,
+				15380AB22494260E007870FD /* HabRow.swift in Sources */,
+				15380AAE2494014B007870FD /* Settings.swift in Sources */,
+				15380AB0249401CE007870FD /* AddHab.swift in Sources */,
 				15175E13249203BB005D2424 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
