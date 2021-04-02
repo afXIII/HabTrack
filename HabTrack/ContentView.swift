@@ -18,7 +18,11 @@ struct ContentView: View {
             VStack{
                 List{
                     ForEach(0..<14){ _ in
-                        HabRow()
+                        NavigationLink(destination: HabDetail()){
+                            HabRow()
+                        }
+                    }
+                    .onDelete { (IndexSet) in
                     }
                 }
                 ZStack {
@@ -56,6 +60,7 @@ struct ContentView: View {
                 }) {
                     Image(systemName: "gear")
                         .foregroundColor(.black)
+                        .font(Font.system(size: 25).bold())
             })
             .sheet(isPresented: self.$showSheet){
                 if self.sheetView == "addHab"{
@@ -66,16 +71,26 @@ struct ContentView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .padding(1)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone 11 Pro"], id: \.self){deviceName in
-            ContentView()
-            .previewDevice(PreviewDevice(rawValue: deviceName))
-            .previewDisplayName(deviceName)
-        }
+//        , "iPhone 11 Pro", "iPad Pro (9.7-inch)"
+//        Group {
+            ForEach(["iPhone 8"], id: \.self){deviceName in
+                ContentView()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+            }
+//            ForEach(["iPad Pro (9.7-inch)"], id: \.self){deviceName in
+//                ContentView()
+//                    .previewDevice(PreviewDevice(rawValue: deviceName))
+//                    .previewDisplayName(deviceName)
+//            }
+//        }
         
     }
 }
