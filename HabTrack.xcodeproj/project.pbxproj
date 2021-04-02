@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15175E0F249203BB005D2424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15175E0E249203BB005D2424 /* AppDelegate.swift */; };
-		15175E11249203BB005D2424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15175E10249203BB005D2424 /* SceneDelegate.swift */; };
-		15175E13249203BB005D2424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15175E12249203BB005D2424 /* ContentView.swift */; };
-		15175E15249203BE005D2424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15175E14249203BE005D2424 /* Assets.xcassets */; };
-		15175E18249203BE005D2424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15175E17249203BE005D2424 /* Preview Assets.xcassets */; };
-		15175E1B249203BE005D2424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15175E19249203BE005D2424 /* LaunchScreen.storyboard */; };
-		15380AAE2494014B007870FD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AAD2494014B007870FD /* Settings.swift */; };
-		15380AB0249401CE007870FD /* AddHab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AAF249401CE007870FD /* AddHab.swift */; };
-		15380AB22494260E007870FD /* HabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15380AB12494260E007870FD /* HabRow.swift */; };
-		15E595F42494B9850004C9EF /* HabDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E595F32494B9850004C9EF /* HabDetail.swift */; };
+		15110B0526147E150035016E /* HabTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110B0426147E150035016E /* HabTrackApp.swift */; };
+		15110B0726147E150035016E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110B0626147E150035016E /* ContentView.swift */; };
+		15110B0926147E160035016E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15110B0826147E160035016E /* Assets.xcassets */; };
+		15110B0C26147E160035016E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15110B0B26147E160035016E /* Preview Assets.xcassets */; };
+		15110B0E26147E160035016E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110B0D26147E160035016E /* Persistence.swift */; };
+		15110B1126147E160035016E /* HabTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15110B0F26147E160035016E /* HabTrack.xcdatamodeld */; };
+		156EEAB2261752F100FF164D /* HabDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAB1261752F100FF164D /* HabDetail.swift */; };
+		156EEAB52617530900FF164D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAB42617530900FF164D /* Settings.swift */; };
+		156EEAB82617532200FF164D /* AddHab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAB72617532200FF164D /* AddHab.swift */; };
+		156EEABB2617533600FF164D /* HabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEABA2617533600FF164D /* HabRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15175E0B249203BB005D2424 /* HabTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15175E0E249203BB005D2424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15175E10249203BB005D2424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15175E12249203BB005D2424 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		15175E14249203BE005D2424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		15175E17249203BE005D2424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		15175E1A249203BE005D2424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		15175E1C249203BE005D2424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15380AAD2494014B007870FD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		15380AAF249401CE007870FD /* AddHab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHab.swift; sourceTree = "<group>"; };
-		15380AB12494260E007870FD /* HabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabRow.swift; sourceTree = "<group>"; };
-		15E595F32494B9850004C9EF /* HabDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabDetail.swift; sourceTree = "<group>"; };
+		15110B0126147E150035016E /* HabTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15110B0426147E150035016E /* HabTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabTrackApp.swift; sourceTree = "<group>"; };
+		15110B0626147E150035016E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15110B0826147E160035016E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15110B0B26147E160035016E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15110B0D26147E160035016E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		15110B1026147E160035016E /* HabTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HabTrack.xcdatamodel; sourceTree = "<group>"; };
+		15110B1226147E160035016E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156EEAB1261752F100FF164D /* HabDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabDetail.swift; sourceTree = "<group>"; };
+		156EEAB42617530900FF164D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		156EEAB72617532200FF164D /* AddHab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHab.swift; sourceTree = "<group>"; };
+		156EEABA2617533600FF164D /* HabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		15175E08249203BB005D2424 /* Frameworks */ = {
+		15110AFE26147E150035016E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,44 +45,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15175E02249203BB005D2424 = {
+		15110AF826147E150035016E = {
 			isa = PBXGroup;
 			children = (
-				15175E0D249203BB005D2424 /* HabTrack */,
-				15175E0C249203BB005D2424 /* Products */,
+				15110B0326147E150035016E /* HabTrack */,
+				15110B0226147E150035016E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		15175E0C249203BB005D2424 /* Products */ = {
+		15110B0226147E150035016E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15175E0B249203BB005D2424 /* HabTrack.app */,
+				15110B0126147E150035016E /* HabTrack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15175E0D249203BB005D2424 /* HabTrack */ = {
+		15110B0326147E150035016E /* HabTrack */ = {
 			isa = PBXGroup;
 			children = (
-				15175E0E249203BB005D2424 /* AppDelegate.swift */,
-				15175E10249203BB005D2424 /* SceneDelegate.swift */,
-				15175E12249203BB005D2424 /* ContentView.swift */,
-				15E595F32494B9850004C9EF /* HabDetail.swift */,
-				15380AB12494260E007870FD /* HabRow.swift */,
-				15380AAF249401CE007870FD /* AddHab.swift */,
-				15380AAD2494014B007870FD /* Settings.swift */,
-				15175E14249203BE005D2424 /* Assets.xcassets */,
-				15175E19249203BE005D2424 /* LaunchScreen.storyboard */,
-				15175E1C249203BE005D2424 /* Info.plist */,
-				15175E16249203BE005D2424 /* Preview Content */,
+				15110B0426147E150035016E /* HabTrackApp.swift */,
+				15110B0626147E150035016E /* ContentView.swift */,
+				156EEABA2617533600FF164D /* HabRow.swift */,
+				156EEAB1261752F100FF164D /* HabDetail.swift */,
+				156EEAB42617530900FF164D /* Settings.swift */,
+				156EEAB72617532200FF164D /* AddHab.swift */,
+				15110B0826147E160035016E /* Assets.xcassets */,
+				15110B0D26147E160035016E /* Persistence.swift */,
+				15110B1226147E160035016E /* Info.plist */,
+				15110B0F26147E160035016E /* HabTrack.xcdatamodeld */,
+				15110B0A26147E160035016E /* Preview Content */,
 			);
 			path = HabTrack;
 			sourceTree = "<group>";
 		};
-		15175E16249203BE005D2424 /* Preview Content */ = {
+		15110B0A26147E160035016E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				15175E17249203BE005D2424 /* Preview Assets.xcassets */,
+				15110B0B26147E160035016E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -90,13 +90,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		15175E0A249203BB005D2424 /* HabTrack */ = {
+		15110B0026147E150035016E /* HabTrack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15175E1F249203BE005D2424 /* Build configuration list for PBXNativeTarget "HabTrack" */;
+			buildConfigurationList = 15110B1526147E160035016E /* Build configuration list for PBXNativeTarget "HabTrack" */;
 			buildPhases = (
-				15175E07249203BB005D2424 /* Sources */,
-				15175E08249203BB005D2424 /* Frameworks */,
-				15175E09249203BB005D2424 /* Resources */,
+				15110AFD26147E150035016E /* Sources */,
+				15110AFE26147E150035016E /* Frameworks */,
+				15110AFF26147E150035016E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -104,25 +104,24 @@
 			);
 			name = HabTrack;
 			productName = HabTrack;
-			productReference = 15175E0B249203BB005D2424 /* HabTrack.app */;
+			productReference = 15110B0126147E150035016E /* HabTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		15175E03249203BB005D2424 /* Project object */ = {
+		15110AF926147E150035016E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = AF3;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					15175E0A249203BB005D2424 = {
-						CreatedOnToolsVersion = 11.5;
+					15110B0026147E150035016E = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 15175E06249203BB005D2424 /* Build configuration list for PBXProject "HabTrack" */;
+			buildConfigurationList = 15110AFC26147E150035016E /* Build configuration list for PBXProject "HabTrack" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,59 +129,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 15175E02249203BB005D2424;
-			productRefGroup = 15175E0C249203BB005D2424 /* Products */;
+			mainGroup = 15110AF826147E150035016E;
+			productRefGroup = 15110B0226147E150035016E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15175E0A249203BB005D2424 /* HabTrack */,
+				15110B0026147E150035016E /* HabTrack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		15175E09249203BB005D2424 /* Resources */ = {
+		15110AFF26147E150035016E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15175E1B249203BE005D2424 /* LaunchScreen.storyboard in Resources */,
-				15175E18249203BE005D2424 /* Preview Assets.xcassets in Resources */,
-				15175E15249203BE005D2424 /* Assets.xcassets in Resources */,
+				15110B0C26147E160035016E /* Preview Assets.xcassets in Resources */,
+				15110B0926147E160035016E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		15175E07249203BB005D2424 /* Sources */ = {
+		15110AFD26147E150035016E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15E595F42494B9850004C9EF /* HabDetail.swift in Sources */,
-				15175E0F249203BB005D2424 /* AppDelegate.swift in Sources */,
-				15175E11249203BB005D2424 /* SceneDelegate.swift in Sources */,
-				15380AB22494260E007870FD /* HabRow.swift in Sources */,
-				15380AAE2494014B007870FD /* Settings.swift in Sources */,
-				15380AB0249401CE007870FD /* AddHab.swift in Sources */,
-				15175E13249203BB005D2424 /* ContentView.swift in Sources */,
+				156EEAB52617530900FF164D /* Settings.swift in Sources */,
+				15110B0E26147E160035016E /* Persistence.swift in Sources */,
+				156EEABB2617533600FF164D /* HabRow.swift in Sources */,
+				15110B1126147E160035016E /* HabTrack.xcdatamodeld in Sources */,
+				156EEAB2261752F100FF164D /* HabDetail.swift in Sources */,
+				15110B0726147E150035016E /* ContentView.swift in Sources */,
+				15110B0526147E150035016E /* HabTrackApp.swift in Sources */,
+				156EEAB82617532200FF164D /* AddHab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		15175E19249203BE005D2424 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15175E1A249203BE005D2424 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		15175E1D249203BE005D2424 /* Debug */ = {
+		15110B1326147E160035016E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,6 +196,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -232,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -242,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		15175E1E249203BE005D2424 /* Release */ = {
+		15110B1426147E160035016E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,6 +257,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -286,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -296,16 +286,17 @@
 			};
 			name = Release;
 		};
-		15175E20249203BE005D2424 /* Debug */ = {
+		15110B1626147E160035016E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HabTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DV5T8J376;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HabTrack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,16 +308,17 @@
 			};
 			name = Debug;
 		};
-		15175E21249203BE005D2424 /* Release */ = {
+		15110B1726147E160035016E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HabTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = 8DV5T8J376;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HabTrack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,25 +333,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15175E06249203BB005D2424 /* Build configuration list for PBXProject "HabTrack" */ = {
+		15110AFC26147E150035016E /* Build configuration list for PBXProject "HabTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15175E1D249203BE005D2424 /* Debug */,
-				15175E1E249203BE005D2424 /* Release */,
+				15110B1326147E160035016E /* Debug */,
+				15110B1426147E160035016E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15175E1F249203BE005D2424 /* Build configuration list for PBXNativeTarget "HabTrack" */ = {
+		15110B1526147E160035016E /* Build configuration list for PBXNativeTarget "HabTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15175E20249203BE005D2424 /* Debug */,
-				15175E21249203BE005D2424 /* Release */,
+				15110B1626147E160035016E /* Debug */,
+				15110B1726147E160035016E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15110B0F26147E160035016E /* HabTrack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15110B1026147E160035016E /* HabTrack.xcdatamodel */,
+			);
+			currentVersion = 15110B1026147E160035016E /* HabTrack.xcdatamodel */;
+			path = HabTrack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 15175E03249203BB005D2424 /* Project object */;
+	rootObject = 15110AF926147E150035016E /* Project object */;
 }

@@ -2,11 +2,12 @@
 //  ContentView.swift
 //  HabTrack
 //
-//  Created by AL3 on 6/11/20.
+//  Created by AL3 on 3/31/21.
 //  Copyright © 2020 AF3. All rights reserved.
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     let addBtnFont = Font.system(size: 30).bold()
@@ -78,19 +79,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        , "iPhone 11 Pro", "iPad Pro (9.7-inch)"
-//        Group {
-            ForEach(["iPhone 8"], id: \.self){deviceName in
-                ContentView()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-            }
-//            ForEach(["iPad Pro (9.7-inch)"], id: \.self){deviceName in
-//                ContentView()
-//                    .previewDevice(PreviewDevice(rawValue: deviceName))
-//                    .previewDisplayName(deviceName)
-//            }
-//        }
+        ForEach(["iPhone 8"], id: \.self){deviceName in
+            ContentView()
+            .previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
         
     }
 }
