@@ -9,13 +9,55 @@
 import SwiftUI
 
 struct Settings: View {
+    @State private var cloudOn = false
+    @State private var notificationsOn = true
+    @State private var selectedTheme = "Light"
+    
     var body: some View {
-        NavigationView{
+        NavigationView {
             Form{
-                Text("Settings")
+                
+                Section(header: Text("General")) {
+                    HStack{
+                        Text("Cloud Storage")
+                        Spacer()
+                        Toggle("", isOn: $cloudOn)
+                    }
+                    HStack{
+                        Text("Notifications")
+                        Spacer()
+                        Toggle("", isOn: $notificationsOn)
+                    }
+                    
+                    Picker("Theme", selection: $selectedTheme) {
+                        Text("Dark").tag("Dark")
+                        Text("Light").tag("Light")
+                        Text("System").tag("System")
+                    }
+                }
+
+                
+                Section(header: Text("App info")) {
+                    HStack{
+                        Text("About HabTrack")
+                        Spacer()
+                        
+                    }
+                    HStack{
+                        Text("Contact Us")
+                        Spacer()
+                        
+                    }
+                    
+                }
+                
+                
             }
-        .navigationBarTitle("Settings")
+
+            .navigationBarTitle("Settings", displayMode: .inline)
+//            .navigationBarHidden(true)
         }
+        
     }
 }
 

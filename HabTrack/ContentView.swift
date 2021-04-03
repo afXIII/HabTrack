@@ -9,72 +9,52 @@
 import SwiftUI
 import CoreData
 
+
+
 struct ContentView: View {
-    let addBtnFont = Font.system(size: 30).bold()
-    var tasks = [String]()
-    @State private var showSheet = false
-    @State private var sheetView = ""
-    var body: some View {
-        NavigationView{
-            VStack{
-                List{
-                    ForEach(0..<14){ _ in
-                        NavigationLink(destination: HabDetail()){
-                            HabRow()
-                        }
-                    }
-                    .onDelete { (IndexSet) in
-                    }
-                }
-                ZStack {
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(Color.white)
-                            .frame(height:50)
-                        Rectangle()
-                            .fill(Color.gray)
-                            .frame(height:50)
-                            .overlay(Rectangle().stroke(Color.black, lineWidth: 3))
-                            .shadow(radius: 10)
-                    }
-                    Button(action: {
-                        self.sheetView = "addHab"
-                        self.showSheet = true
-                    }) {
-                        ZStack {
-                            Circle()
-                                .fill(Color.green)
-                                .frame(width:60, height: 100)
-                                .shadow(radius: 10)
-                            Image(systemName: "plus")
-                                .foregroundColor(.white)
-                                .font(addBtnFont)
-                        }
-                    }
-                }
-            }
-            .navigationBarTitle("HabTrack")
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.sheetView = "settings"
-                    self.showSheet = true
-                }) {
-                    Image(systemName: "gear")
-                        .foregroundColor(.black)
-                        .font(Font.system(size: 25).bold())
-            })
-            .sheet(isPresented: self.$showSheet){
-                if self.sheetView == "addHab"{
-                    AddHab()
-                } else {
-                    Settings()
-                }
-            }
-            .edgesIgnoringSafeArea(.bottom)
-        }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .padding(1)
+    
+    let date: Date
+    let dateFormatter: DateFormatter
+    
+    init() {
+        date = Date()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
     }
+    
+    var tasks = [String]()
+
+    var body: some View {
+    
+
+            VStack{
+                HStack{
+                    Text(date, formatter: dateFormatter)
+                    Spacer()
+                    Image(systemName: "calendar")
+                }
+                .padding()
+                
+                NavigationView {
+                    ScrollView{
+                        LazyVStack{
+                            ForEach(0..<3){ _ in
+                                ZStack {
+                                    HabRow()
+                                        .padding()
+                                    NavigationLink(destination: HabDetail()){
+                                            Rectangle()
+                                                .fill(Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 0))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .navigationBarTitle("Habits")
+                    .navigationBarHidden(true)
+                }
+            }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {

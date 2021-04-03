@@ -17,6 +17,8 @@
 		156EEAB52617530900FF164D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAB42617530900FF164D /* Settings.swift */; };
 		156EEAB82617532200FF164D /* AddHab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAB72617532200FF164D /* AddHab.swift */; };
 		156EEABB2617533600FF164D /* HabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEABA2617533600FF164D /* HabRow.swift */; };
+		156EEABF2617786F00FF164D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEABE2617786F00FF164D /* MainTabView.swift */; };
+		156EEAC226177EC800FF164D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAC126177EC800FF164D /* ViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		156EEAB42617530900FF164D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		156EEAB72617532200FF164D /* AddHab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHab.swift; sourceTree = "<group>"; };
 		156EEABA2617533600FF164D /* HabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabRow.swift; sourceTree = "<group>"; };
+		156EEABE2617786F00FF164D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		156EEAC126177EC800FF164D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			children = (
 				15110B0426147E150035016E /* HabTrackApp.swift */,
 				15110B0626147E150035016E /* ContentView.swift */,
+				156EEABE2617786F00FF164D /* MainTabView.swift */,
+				156EEAC126177EC800FF164D /* ViewRouter.swift */,
 				156EEABA2617533600FF164D /* HabRow.swift */,
 				156EEAB1261752F100FF164D /* HabDetail.swift */,
 				156EEAB42617530900FF164D /* Settings.swift */,
@@ -158,8 +164,10 @@
 			files = (
 				156EEAB52617530900FF164D /* Settings.swift in Sources */,
 				15110B0E26147E160035016E /* Persistence.swift in Sources */,
+				156EEABF2617786F00FF164D /* MainTabView.swift in Sources */,
 				156EEABB2617533600FF164D /* HabRow.swift in Sources */,
 				15110B1126147E160035016E /* HabTrack.xcdatamodeld in Sources */,
+				156EEAC226177EC800FF164D /* ViewRouter.swift in Sources */,
 				156EEAB2261752F100FF164D /* HabDetail.swift in Sources */,
 				15110B0726147E150035016E /* ContentView.swift in Sources */,
 				15110B0526147E150035016E /* HabTrackApp.swift in Sources */,

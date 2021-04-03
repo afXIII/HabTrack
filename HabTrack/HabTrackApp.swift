@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct HabTrackApp: App {
     let persistenceController = PersistenceController.shared
-
+    
+    @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView(viewRouter: viewRouter)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
