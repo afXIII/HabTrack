@@ -8,29 +8,56 @@
 
 import SwiftUI
 
+
 struct HabRow: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [],
+        animation: .default)
+    private var habits: FetchedResults<Habit>
+    
+    var habit = Habit()
+    
     var body: some View {
+        let habitColor = Color(red: habit.color_red, green: habit.color_green, blue: habit.color_blue, opacity: habit.color_alpha)
         VStack{
             HStack{
-                Image(systemName: "circles.hexagongrid.fill")
-                    .foregroundColor(Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 1))
-                    .font(Font.system(size: 25))
+                if habit.type == "Goal"{
+                    Image(systemName: "circles.hexagongrid.fill")
+                        .foregroundColor(habitColor)
+                        .font(Font.system(size: 25))
+                }else if habit.type == "Infinite"{
+                    Image(systemName: "infinity")
+                        .foregroundColor(habitColor)
+                        .font(Font.system(size: 25))
+                }
+                
                 
                 VStack(alignment: .leading){
-                    Text("Habit Name")
+                    Text(habit.name)
                         .font(.title)
-                    Text("Habit details")
+                    Text("\(habit.type)")
                         .font(.footnote)
                 }
                 .padding(.leading)
                 
                 Spacer()
-                Text("15")
-                    .foregroundColor(Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 1))
+                if habit.type == "Goal"{
+                    Text("\(habit.streak)/\(habit.goal)")
+                        .foregroundColor(habitColor)
+                }
+                else if habit.type == "Infinite"{
+                    Text("\(habit.streak)")
+                        .foregroundColor(habitColor)
+                }
+                
                 
             }
-            ProgressView(value: 50, total: 100)
-                .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 1)))
+            if habit.type == "Goal"{
+                ProgressView(value: Float(habit.streak), total: Float(habit.goal))
+                    .progressViewStyle(LinearProgressViewStyle(tint: habitColor))
+            }
+            
         }
         .padding()
         .background(

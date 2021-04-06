@@ -10,22 +10,12 @@ import SwiftUI
 
 struct AddHab: View {
     
-    enum HabitType: String, CaseIterable, Identifiable {
-        case Infinite
-        case Goal
-
-        var id: String { self.rawValue }
-    }
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var viewRouter: ViewRouter
     
-    enum ColorType: String, CaseIterable, Identifiable {
-        case Infinite
-        case Goal
-
-        var id: String { self.rawValue }
-    }
     
     @State private var habitName = ""
-    @State private var selectedType = HabitType.Infinite
+    @State private var selectedType = "Infinite"
     @State private var habGoal = ""
     @State private var selectedColor =
             Color(.sRGB, red: 189/255, green: 21/255, blue: 80/255)
@@ -57,13 +47,13 @@ struct AddHab: View {
             }
             
             Picker("Please choose a type", selection: $selectedType) {
-                Text("Infinite").tag(HabitType.Infinite)
-                Text("Goal").tag(HabitType.Goal)
+                Text("Infinite").tag("Infinite")
+                Text("Goal").tag("Goal")
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.bottom)
             
-            if self.selectedType == HabitType.Goal{
+            if self.selectedType == "Goal"{
                 HStack{
                     Text("Goal Amount")
                         .font(.title3)
@@ -93,9 +83,30 @@ struct AddHab: View {
                     .fill(Color.green)
                     .frame(width:100, height: 50)
                     .shadow(radius: 10)
-                Text("Save")
-                    .foregroundColor(.white)
-                        .font(Font.system(size: 25).bold())
+                Button("Save") {
+                    let newHabit = Habit(context: viewContext)
+                    newHabit.name = habitName
+                    newHabit.type = selectedType
+                    newHabit.goal = Int16(habGoal) ?? 0
+                    newHabit.streak = 0
+                    newHabit.color_red = Double(selectedColor.components.red)
+                    newHabit.color_green = Double(selectedColor.components.green)
+                    newHabit.color_blue = Double(selectedColor.components.blue)
+                    newHabit.color_alpha = Double(selectedColor.components.opacity)
+                    do {
+                        try viewContext.save()
+                    } catch {
+                        // Replace this implementation with code to handle the error appropriately.
+                        // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                        let nsError = error as NSError
+                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                    }
+                    habitName = ""
+                    hideKeyboard()
+                    viewRouter.currentPage = .habits
+                }
+                .foregroundColor(.white)
+                .font(Font.system(size: 25).bold())
             }
             Spacer()
             
@@ -106,6 +117,6 @@ struct AddHab: View {
 
 struct AddHab_Previews: PreviewProvider {
     static var previews: some View {
-        AddHab()
+        AddHab(viewRouter: ViewRouter())
     }
 }

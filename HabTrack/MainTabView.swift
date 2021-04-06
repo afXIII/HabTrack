@@ -9,17 +9,17 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @StateObject var viewRouter: ViewRouter
+    @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
         VStack{
             switch viewRouter.currentPage {
             case .habits:
-                ContentView()
+                ContentView(passed: viewRouter)
             case .settings:
                 Settings()
             case .addhabit:
-                AddHab()
+                AddHab(viewRouter: viewRouter)
             }
             
             ZStack {
