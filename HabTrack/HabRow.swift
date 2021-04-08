@@ -11,6 +11,7 @@ import SwiftUI
 
 struct HabRow: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.colorScheme) var colorScheme
     @FetchRequest(
         sortDescriptors: [],
         animation: .default)
@@ -62,7 +63,7 @@ struct HabRow: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color.white).shadow(radius: 5))
+                .fill(colorScheme == .dark ? Color(red: 180/255, green: 180/255, blue: 180/255, opacity: 1) : Color.white).shadow(radius: 5))
         
     }
 }

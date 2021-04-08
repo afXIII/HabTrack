@@ -10,7 +10,7 @@ import SwiftUI
 struct EditHab: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var habit = Habit()
+    @StateObject var habit = Habit()
     
     @State private var selectedColor =
             Color(.sRGB, red: 189/255, green: 21/255, blue: 80/255)
@@ -54,7 +54,7 @@ struct EditHab: View {
                     Spacer()
                 }
                 
-                Stepper("\(habit.goal)", value: $habit.goal)
+                Stepper("\(habit.goal)", value: $habit.goal, in: 1...30)
                     .padding(.bottom)
             }
             

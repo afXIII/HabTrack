@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -25,11 +25,11 @@ struct MainTabView: View {
             ZStack {
                 VStack(spacing: 0) {
                     Rectangle()
-                        .fill(Color.white)
+                        .fill(colorScheme == .dark ? Color.black : Color.white)
                         .frame(height:25)
                     ZStack{
                         Rectangle()
-                            .fill(Color(red: 220/255, green: 220/255, blue: 220/255, opacity: 1))
+                            .fill(colorScheme == .dark ? Color(red: 100/255, green: 100/255, blue: 100/255, opacity: 1) : Color(red: 220/255, green: 220/255, blue: 220/255, opacity: 1))
                             .frame(height:50)
                             .shadow(radius: 5)
                         HStack{
