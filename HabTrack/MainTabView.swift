@@ -30,7 +30,7 @@ struct MainTabView: View {
                     ZStack{
                         Rectangle()
                             .fill(colorScheme == .dark ? Color(red: 100/255, green: 100/255, blue: 100/255, opacity: 1) : Color(red: 220/255, green: 220/255, blue: 220/255, opacity: 1))
-                            .frame(height:50)
+                            .frame(height:60)
                             .shadow(radius: 5)
                         HStack{
                             Spacer()
@@ -38,6 +38,7 @@ struct MainTabView: View {
                                 .onTapGesture {
                                     viewRouter.currentPage = .habits
                                 }
+                                .font(Font.system(size: 20))
                             Spacer()
                             Spacer()
                             Spacer()
@@ -45,6 +46,7 @@ struct MainTabView: View {
                                 .onTapGesture {
                                     viewRouter.currentPage = .settings
                                 }
+                                .font(Font.system(size: 20))
                             Spacer()
                         }
                     }
@@ -60,7 +62,7 @@ struct MainTabView: View {
                         .foregroundColor(.white)
                             .font(Font.system(size: 30).bold())
                 }
-                .offset(y:-5)
+                .offset(y:-15)
                 .onTapGesture {
                     viewRouter.currentPage = .addhabit
                 }

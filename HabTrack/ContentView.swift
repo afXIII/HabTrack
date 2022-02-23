@@ -47,36 +47,34 @@ struct ContentView: View {
                 .padding()
                 
                 NavigationView {
-//                    ScrollView{
-                        List{
-                            
-                            ForEach(habits) { habit in
-                                ZStack {
-                                    HabRow(habit: habit)
-                                        .padding()
-                                    NavigationLink(destination: HabDetail(viewRouter: viewRouter, habit: habit)){
-                                            Rectangle()
-                                                .fill(Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 0))
-                                    }
+                    List{
+                        
+                        ForEach(habits) { habit in
+                            ZStack {
+                                HabRow(habit: habit)
+                                    .padding()
+                                NavigationLink(destination: HabDetail(viewRouter: viewRouter, habit: habit)){
+                                        Rectangle()
+                                            .fill(Color(red: 189/255, green: 21/255, blue: 80/255, opacity: 0))
                                 }
                             }
-                            .onDelete(perform: { indexSet in
-                                withAnimation {
-                                    indexSet.map { habits[$0] }.forEach(viewContext.delete)
-
-                                    do {
-                                        try viewContext.save()
-                                    } catch {
-                                        // Replace this implementation with code to handle the error appropriately.
-                                        // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                                        let nsError = error as NSError
-                                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-                                    }
-                                }
-                            })
-                            EditButton()
                         }
-//                    }
+                        .onDelete(perform: { indexSet in
+                            withAnimation {
+                                indexSet.map { habits[$0] }.forEach(viewContext.delete)
+
+                                do {
+                                    try viewContext.save()
+                                } catch {
+                                    // Replace this implementation with code to handle the error appropriately.
+                                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                                    let nsError = error as NSError
+                                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                                }
+                            }
+                        })
+//                            EditButton() // potential swiftui bug is making this edit button be untappable after tapping
+                    }
                     .navigationBarTitle("Habits")
                     .navigationBarHidden(true)
                 }
