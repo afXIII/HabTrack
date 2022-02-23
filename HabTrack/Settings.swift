@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct Settings: View {
     @State private var cloudOn = false
@@ -27,6 +28,19 @@ struct Settings: View {
                         Text("Notifications")
                         Spacer()
                         Toggle("", isOn: $notificationsOn)
+                            .onTapGesture {
+                                if notificationsOn == true{
+                                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                        if success {
+                                            print("All set!")
+                                        } else if let error = error {
+                                            print(error.localizedDescription)
+                                        }
+                                    }
+                                }else{
+                                    
+                                }
+                            }
                     }
                     
                     Picker("Theme", selection: $selectedTheme) {
