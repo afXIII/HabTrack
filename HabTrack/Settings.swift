@@ -10,9 +10,9 @@ import SwiftUI
 import UserNotifications
 
 struct Settings: View {
-    @State private var cloudOn = false
-    @State private var notificationsOn = false
-    @State private var selectedTheme = "Light"
+    @AppStorage("cloudOn") private var cloudOn = false
+    @AppStorage("notificationsOn") private var notificationsOn = false
+    @AppStorage("selectedTheme") private var selectedTheme = "Light"
     
     var body: some View {
         NavigationView {
@@ -23,22 +23,37 @@ struct Settings: View {
                         Text("Cloud Storage")
                         Spacer()
                         Toggle("", isOn: $cloudOn)
+                            .onChange(of: cloudOn) { _ in
+                                UserDefaults.standard.set(cloudOn, forKey: "cloudOn");
+                            }
                     }
                     HStack{
                         Text("Notifications")
                         Spacer()
                         Toggle("", isOn: $notificationsOn)
-                            .onTapGesture {
-                                if notificationsOn == false{
-                                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                                        if success {
-                                            print("All set!")
-                                        } else if let error = error {
-                                            print(error.localizedDescription)
+                            .onChange(of: notificationsOn) { _ in
+                                if notificationsOn == true{
+                                    UNUserNotificationCenter.current().getNotificationSettings(completionHandler:{ (settings) in
+                                        switch settings.authorizationStatus{
+                                        case .authorized:
+                                            break
+                                        case .denied:
+                                            notificationsOn = false;
+                                        case .notDetermined:
+                                            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                                if success {
+                                                    notificationsOn = true
+                                                } else if let error = error {
+                                                    print(error.localizedDescription)
+                                                    notificationsOn = false
+                                                }
+                                            }
+                                        default: break
                                         }
-                                    }
+                                        UserDefaults.standard.set(notificationsOn, forKey: "notificationsOn");
+                                    })
                                 }else{
-                                    
+                                    UserDefaults.standard.set(notificationsOn, forKey: "notificationsOn");
                                 }
                             }
                     }
@@ -47,6 +62,9 @@ struct Settings: View {
                         Text("Dark").tag("Dark")
                         Text("Light").tag("Light")
                         Text("System").tag("System")
+                    }
+                    .onChange(of: selectedTheme) { _ in
+                        UserDefaults.standard.set(selectedTheme, forKey: "selectedTheme")
                     }
                 }
 
