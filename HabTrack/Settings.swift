@@ -11,7 +11,7 @@ import UserNotifications
 
 struct Settings: View {
     @State private var cloudOn = false
-    @State private var notificationsOn = true
+    @State private var notificationsOn = false
     @State private var selectedTheme = "Light"
     
     var body: some View {
@@ -29,7 +29,7 @@ struct Settings: View {
                         Spacer()
                         Toggle("", isOn: $notificationsOn)
                             .onTapGesture {
-                                if notificationsOn == true{
+                                if notificationsOn == false{
                                     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
                                         if success {
                                             print("All set!")
