@@ -39,11 +39,12 @@ struct InitAuth: View {
                     if success {
                         isAuthenticated = true
                     } else {
-                        // authentication fail
+                        // TODO: add PIN security 
                     }
                 }
                 
             } else {
+                UserDefaults.standard.set(false, forKey: "useBiometrics");
                 //TODO: Add alert that says device not supported
             }
         }

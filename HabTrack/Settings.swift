@@ -76,9 +76,10 @@ struct Settings: View {
                         Spacer()
                         Toggle("", isOn: $useBiometrics)
                             .onChange(of: useBiometrics) { _ in
-                                UserDefaults.standard.set(useBiometrics, forKey: "useBiometrics");
                                 if useBiometrics{
                                     authenticateBiometrics()
+                                } else {
+                                    UserDefaults.standard.set(useBiometrics, forKey: "useBiometrics");
                                 }
                             }
                     }
@@ -118,13 +119,14 @@ struct Settings: View {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
                 success, authenticationError in
                 if success {
-                    // authentication success
+                    UserDefaults.standard.set(useBiometrics, forKey: "useBiometrics");
                 } else {
-                    // authentication fail
+                    UserDefaults.standard.set(false, forKey: "useBiometrics");
                 }
             }
             
         } else {
+            UserDefaults.standard.set(false, forKey: "useBiometrics");
             //TODO: Add alert that says device not supported
         }
     }
