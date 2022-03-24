@@ -19,6 +19,7 @@
 		156EEABB2617533600FF164D /* HabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEABA2617533600FF164D /* HabRow.swift */; };
 		156EEABF2617786F00FF164D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEABE2617786F00FF164D /* MainTabView.swift */; };
 		156EEAC226177EC800FF164D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EEAC126177EC800FF164D /* ViewRouter.swift */; };
+		159FD7F727EC4F6D0009E4FA /* InitAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159FD7F627EC4F6D0009E4FA /* InitAuth.swift */; };
 		15DECDE1261CE86B006E5AF8 /* EditHab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DECDE0261CE86B006E5AF8 /* EditHab.swift */; };
 		15DECDE5261CF2BB006E5AF8 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DECDE3261CF2BB006E5AF8 /* Habit+CoreDataClass.swift */; };
 		15DECDE6261CF2BB006E5AF8 /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DECDE4261CF2BB006E5AF8 /* Habit+CoreDataProperties.swift */; };
@@ -39,6 +40,7 @@
 		156EEABA2617533600FF164D /* HabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabRow.swift; sourceTree = "<group>"; };
 		156EEABE2617786F00FF164D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		156EEAC126177EC800FF164D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		159FD7F627EC4F6D0009E4FA /* InitAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitAuth.swift; sourceTree = "<group>"; };
 		15DECDE0261CE86B006E5AF8 /* EditHab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHab.swift; sourceTree = "<group>"; };
 		15DECDE3261CF2BB006E5AF8 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		15DECDE4261CF2BB006E5AF8 /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				15110B1226147E160035016E /* Info.plist */,
 				15110B0F26147E160035016E /* HabTrack.xcdatamodeld */,
 				15110B0A26147E160035016E /* Preview Content */,
+				159FD7F627EC4F6D0009E4FA /* InitAuth.swift */,
 			);
 			path = HabTrack;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				15DECDE1261CE86B006E5AF8 /* EditHab.swift in Sources */,
 				156EEABB2617533600FF164D /* HabRow.swift in Sources */,
 				15110B1126147E160035016E /* HabTrack.xcdatamodeld in Sources */,
+				159FD7F727EC4F6D0009E4FA /* InitAuth.swift in Sources */,
 				156EEAC226177EC800FF164D /* ViewRouter.swift in Sources */,
 				156EEAB2261752F100FF164D /* HabDetail.swift in Sources */,
 				15110B0726147E150035016E /* ContentView.swift in Sources */,
