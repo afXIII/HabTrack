@@ -8,6 +8,7 @@
 
 import SwiftUI
 import UserNotifications
+import LocalAuthentication
 
 struct Settings: View {
     @AppStorage("cloudOn") private var cloudOn = false
@@ -76,6 +77,9 @@ struct Settings: View {
                         Toggle("", isOn: $useBiometrics)
                             .onChange(of: useBiometrics) { _ in
                                 UserDefaults.standard.set(useBiometrics, forKey: "useBiometrics");
+                                if useBiometrics{
+                                    authenticateBiometrics()
+                                }
                             }
                     }
                 }
@@ -102,6 +106,27 @@ struct Settings: View {
 //            .navigationBarHidden(true)
         }
         
+    }
+    
+    func authenticateBiometrics(){
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
+            let reason = "To only show habit data if authenticated"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                success, authenticationError in
+                if success {
+                    // authentication success
+                } else {
+                    // authentication fail
+                }
+            }
+            
+        } else {
+            //TODO: Add alert that says device not supported
+        }
     }
 }
 
