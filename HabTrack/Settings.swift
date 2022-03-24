@@ -13,6 +13,7 @@ struct Settings: View {
     @AppStorage("cloudOn") private var cloudOn = false
     @AppStorage("notificationsOn") private var notificationsOn = false
     @AppStorage("selectedTheme") private var selectedTheme = "Light"
+    @AppStorage("useBiometrics") private var useBiometrics = false
     
     var body: some View {
         NavigationView {
@@ -65,6 +66,17 @@ struct Settings: View {
                     }
                     .onChange(of: selectedTheme) { _ in
                         UserDefaults.standard.set(selectedTheme, forKey: "selectedTheme")
+                    }
+                }
+                
+                Section(header: Text("Privacy")) {
+                    HStack{
+                        Text("BioMetrics")
+                        Spacer()
+                        Toggle("", isOn: $useBiometrics)
+                            .onChange(of: useBiometrics) { _ in
+                                UserDefaults.standard.set(useBiometrics, forKey: "useBiometrics");
+                            }
                     }
                 }
 
